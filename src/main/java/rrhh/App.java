@@ -1,10 +1,27 @@
 package rrhh;
 
 public class App {
-
     public static void main(String[] args) {
-        AltaEmpleadoService s = new AltaEmpleadoService();
-        s.alta("11111111A", "Lucía");
-        s.alta("22222222B", "Álvaro");
+        // Aquí "inyectamos" las implementaciones concretas
+        EmpleadoRepositorio repo = new EmpleadoRepositorio() {
+            @Override
+            public boolean existe(String dni) {
+                return false;
+            }
+
+            @Override
+            public void guardar(Empleado e) {
+
+            }
+        };
+        GeneradorContraseña gen = new GeneradorContraseña() {
+            @Override
+            public String generar() {
+                return "";
+            }
+        };
+
+        AltaEmpleado service = new AltaEmpleado(repo, gen);
+        service.alta("11111111A", "Lucía");
     }
 }
