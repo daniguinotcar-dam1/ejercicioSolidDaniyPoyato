@@ -11,7 +11,9 @@ public class BibliotecaApp {
 
         // PRESTAR
         for (Libro libro : libros) {
-            service.prestar(libro, "12345678A");
+            if (libro instanceof PuedePrestar){
+                service.prestar(libro, "12345678A");
+            }
         }
 
         System.out.println();

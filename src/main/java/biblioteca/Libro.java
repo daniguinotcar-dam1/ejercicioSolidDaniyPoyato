@@ -2,7 +2,7 @@ package biblioteca;
 
 import java.time.LocalDate;
 
-public class Libro {
+public class Libro implements PuedePrestar {
 
     protected final String titulo;
     protected String prestadoA;

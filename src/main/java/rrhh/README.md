@@ -2,7 +2,7 @@
 
 ## 1) Principio SOLID vulnerado principalmente
 **Principio (SRP / OCP / LSP / DIP):**
-
+DIP (Dependency Inversion Principle)
 ## 2) Justificación con evidencias
 **Clase(s) y/o método(s) donde se concentra el problema:**
 - 

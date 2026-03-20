@@ -2,7 +2,7 @@ package biblioteca;
 
 import java.time.LocalDate;
 
-public class LibroReferencia extends Libro {
+public class LibroReferencia extends Libro implements NoPuedePrestar {
 
     public LibroReferencia(String titulo) {
         super(titulo);
